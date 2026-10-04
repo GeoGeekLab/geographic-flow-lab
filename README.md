@@ -4,7 +4,11 @@
 
 *GEOGRAPHIC FLOW LABORATORY* is a GIS and geovisual-analytics instrument for comparing four distinct representations of movement through geographic space. It places Eulerian vector fields, origin–destination relations, timestamped trajectories, and Lagrangian particle releases in a common analytical environment while preserving the spatial ontology, temporal support, and measurement unit of each representation.
 
-[![Geographic Flow Laboratory instrument](https://geogeeklab.github.io/geographic-flow-lab/assets/instrument.png)](https://geogeeklab.github.io/geographic-flow-lab/)
+<p align="center">
+  <a href="https://geogeeklab.github.io/geographic-flow-lab/">
+    <img src="https://geogeeklab.github.io/geographic-flow-lab/assets/instrument.png" alt="Geographic Flow Laboratory instrument" width="720">
+  </a>
+</p>
 
 ## Representation model
 
