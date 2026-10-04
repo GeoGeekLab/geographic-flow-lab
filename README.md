@@ -2,7 +2,7 @@
 
 **Vector field · origin–destination graph · trajectory · Lagrangian advection**
 
-*GEOGRAPHIC FLOW LABORATORY* is a GIS and geovisual-analytics instrument for comparing four distinct representations of movement through geographic space. It places Eulerian vector fields, origin–destination relations, timestamped trajectories, and Lagrangian particle releases in a common analytical environment while preserving the spatial ontology, temporal support, and measurement unit of each representation.
+*GEOGRAPHIC FLOW LABORATORY* is a GIS and geovisual-analytics instrument for comparing four representations of movement through geographic space: Eulerian vector fields, origin–destination relations, timestamped trajectories, and Lagrangian particle releases.
 
 <p align="center">
   <a href="https://geogeeklab.github.io/geographic-flow-lab/">
@@ -12,14 +12,12 @@
 
 ## Laboratory capabilities
 
-*GEOGRAPHIC FLOW LABORATORY* provides four coordinated analysis modes for asking how movement is represented, aggregated, and interpreted in geographic space.
-
-- **Examine vector fields.** Visualize spatially distributed direction and magnitude as an Eulerian field and inspect how sampling density changes the represented flow structure.
-- **Analyze origin–destination relations.** Compare weighted links among discrete places to study connectivity, interaction intensity, and network-scale movement patterns.
-- **Inspect trajectories.** Follow time-ordered coordinate sequences to examine individual movement paths, temporal ordering, and route geometry.
-- **Run particle releases.** Seed particles into a selected vector field and numerically advect them to examine Lagrangian transport through the same underlying flow environment.
-- **Switch representations without changing the analytical frame.** Compare field, OD, trajectory, and release modes within a common geographic view so that differences in spatial ontology remain visible.
-- **Control analytical support.** Adjust field sampling, release conditions, and other representation-specific parameters to examine how spatial and temporal scale affect the resulting pattern.
+- **Examine vector fields.** Visualize spatially distributed direction and magnitude and change field sampling density.
+- **Analyze origin–destination relations.** Compare weighted links among discrete places and inspect connectivity and interaction intensity.
+- **Inspect trajectories.** Follow time-ordered coordinate sequences and examine route geometry and temporal ordering.
+- **Run particle releases.** Seed particles into a vector field and numerically advect them through the selected field state.
+- **Switch representations.** Compare field, OD, trajectory, and release modes within one geographic view.
+- **Control analytical support.** Adjust field sampling, release conditions, and representation-specific parameters.
 
 ## Representation model
 
@@ -27,34 +25,36 @@
 | --- | --- | --- |
 | Vector field | Spatially distributed vector function **u(x, t)** | Direction and magnitude defined over geographic space |
 | Origin–destination network | Weighted directed graph between discrete places | Spatial interaction, connectivity, and aggregate flow intensity |
-| Trajectory | Time-ordered coordinate sequence **xᵢ(t)** | Movement history of an individual entity through space and time |
-| Lagrangian release | Numerical solution of **dx/dt = u(x, t₀)** for seeded particles | Flow-following transport through a frozen field realization |
+| Trajectory | Time-ordered coordinate sequence **xᵢ(t)** | Movement history through space and time |
+| Lagrangian release | Numerical solution of **dx/dt = u(x, t₀)** for seeded particles | Flow-following transport through a selected field state |
 
-The four representations answer different classes of geographic questions. A field characterizes a property distributed over space; an OD matrix encodes relational intensity between places; a trajectory records an ordered path through time; and a particle release derives transport pathways from a velocity field.
-
-This distinction is central to spatial analysis because geometry alone does not determine semantics. Two visually similar lines may represent an inferred OD relation, an observed trajectory, or a numerically integrated streamline, each with a different analytical meaning.
+Each representation carries its own spatial unit, temporal support, and measurement semantics. Field mode describes a variable over space. OD mode describes relations between places. Trajectory mode records ordered positions. Release mode computes transport from a velocity field.
 
 ## Spatial computation
 
-Field mode can request near-current wind variables from the [Open-Meteo Weather API](https://open-meteo.com/en/docs), producing a spatially sampled velocity field for geovisual inspection. OD and trajectory modes use reproducible teaching datasets with geographic coordinates, weights, and timestamps. Release mode performs numerical advection through one frozen field state, providing an explicit bridge between Eulerian and Lagrangian descriptions of motion.
+Field mode can request near-current wind variables from the [Open-Meteo Weather API](https://open-meteo.com/en/docs) and construct a sampled velocity field for inspection. OD and trajectory modes use reproducible teaching datasets with geographic coordinates, weights, and timestamps. Release mode performs numerical advection through one selected field state.
 
-The laboratory therefore spans several GIScience domains:
+The laboratory covers:
 
-- **spatial interaction modeling**, through weighted origin–destination relations;
-- **network geography**, through node–edge connectivity and flow magnitude;
-- **trajectory analysis**, through ordered spatiotemporal positions;
-- **field-based GIS**, through continuous-space vector representation;
-- **Lagrangian transport**, through numerical particle advection; and
-- **geovisual analytics**, through coordinated comparison of multiple spatial representations.
+- spatial interaction modeling;
+- network geography;
+- trajectory analysis;
+- field-based GIS;
+- Lagrangian transport;
+- geovisual analytics.
 
-## Analytical scale and support
+## Scale and support
 
-Interpretation depends on the support of the represented variable. Field sampling density controls the spatial resolution of the velocity representation; OD nodes aggregate interaction at place locations; trajectory timestamps determine temporal granularity; and numerical integration step size affects the geometry of advected particles. These parameters make scale an explicit part of the analysis rather than a display-only setting.
+Field sampling density sets the spatial resolution of the velocity representation. OD nodes set the locations of interaction aggregation. Trajectory timestamps set temporal granularity. Numerical integration step size controls the computed particle path.
+
+These parameters can be changed directly in the analysis workflow.
 
 ## Instrument access
 
 **Live instrument:** https://geogeeklab.github.io/geographic-flow-lab/
 
-*GEOGRAPHIC FLOW LABORATORY* is a public entrypoint to the production module maintained in [`GeoGeekLab/GeoGeekLab.github.io`](https://github.com/GeoGeekLab/GeoGeekLab.github.io). [`SOURCE.json`](./SOURCE.json) records the pinned upstream revision, and [`PRODUCTION.md`](./PRODUCTION.md) specifies representation semantics, data conditions, and deployment behavior.
+Source runtime: [`GeoGeekLab/GeoGeekLab.github.io`](https://github.com/GeoGeekLab/GeoGeekLab.github.io)  
+Pinned revision: [`SOURCE.json`](./SOURCE.json)  
+Production contract: [`PRODUCTION.md`](./PRODUCTION.md)
 
 *GeoGeek note — representation determines the question you can ask.*
