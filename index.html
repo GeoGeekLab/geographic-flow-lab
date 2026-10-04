@@ -10,17 +10,17 @@
 </style>
 </head>
 <body>
-<header class="top"><a href="https://geogeeklab.github.io/lab.html">GEOGEEK / OBSERVATORY</a><span>PRODUCTION RUNTIME / PINNED</span></header>
+<header class="top"><a href="https://geogeeklab.github.io/lab.html">GEOGEEK / OBSERVATORY</a><span>PRODUCTION RUNTIME / VENDORED</span></header>
 <main><div id="instrumentStage" class="stage" aria-live="polite"><div class="instrument-loading"><strong>Loading Geographic Flow Laboratory…</strong></div></div></main>
 <footer class="foot"><span>GeoGeek · Geo to see. Geek to build.</span><span>FLOW / OD / TRAJECTORY / RELEASE</span></footer>
-<script src="https://cdn.jsdelivr.net/gh/GeoGeekLab/GeoGeekLab.github.io@d949bd75870bfd49f6d12b297e6cca02de107f9c/site/flow-lab.js" crossorigin="anonymous"></script>
+<script src="./runtime/flow-lab.js"></script>
 <script>
 (() => {
   const stage = document.getElementById('instrumentStage');
   const controller = new AbortController();
   const runtime = window.GeoFlowLab;
   if (!runtime?.mount) {
-    stage.innerHTML = '<div class="instrument-error"><strong>Flow runtime unavailable.</strong><span>The pinned production module did not initialize.</span></div>';
+    stage.innerHTML = '<div class="instrument-error"><strong>Flow runtime unavailable.</strong><span>The vendored production module did not initialize.</span></div>';
     return;
   }
   Promise.resolve(runtime.mount({ stage, signal: controller.signal })).catch(error => {
