@@ -10,6 +10,17 @@
   </a>
 </p>
 
+## Laboratory capabilities
+
+*GEOGRAPHIC FLOW LABORATORY* provides four coordinated analysis modes for asking how movement is represented, aggregated, and interpreted in geographic space.
+
+- **Examine vector fields.** Visualize spatially distributed direction and magnitude as an Eulerian field and inspect how sampling density changes the represented flow structure.
+- **Analyze origin–destination relations.** Compare weighted links among discrete places to study connectivity, interaction intensity, and network-scale movement patterns.
+- **Inspect trajectories.** Follow time-ordered coordinate sequences to examine individual movement paths, temporal ordering, and route geometry.
+- **Run particle releases.** Seed particles into a selected vector field and numerically advect them to examine Lagrangian transport through the same underlying flow environment.
+- **Switch representations without changing the analytical frame.** Compare field, OD, trajectory, and release modes within a common geographic view so that differences in spatial ontology remain visible.
+- **Control analytical support.** Adjust field sampling, release conditions, and other representation-specific parameters to examine how spatial and temporal scale affect the resulting pattern.
+
 ## Representation model
 
 | Representation | Formal object | Geographic interpretation |
