@@ -1,56 +1,32 @@
 # Geographic Flow Laboratory
 
-**Field / OD / trajectory / release**
+**Vector field · origin–destination · trajectory · Lagrangian release**
 
-Geographic Flow Laboratory is a comparative instrument for studying how movement changes when it is represented in different mathematical forms. A vector field, an origin–destination network, a timestamped trajectory set, and a Lagrangian release can all describe motion, but they do not describe the same thing.
+Geographic Flow Laboratory is a GIS instrument for comparing four distinct representations of movement through geographic space. It places Eulerian fields, origin–destination relations, timestamped trajectories, and Lagrangian particle releases in a common analytical environment while preserving the different spatial ontologies and measurement supports of each representation.
 
-> **GeoGeek principle:** Representation is not phenomenon.
+![Geographic Flow Laboratory instrument](https://geogeeklab.github.io/geographic-flow-lab/assets/instrument.png)
 
-## The question
+## Representation model
 
-What changes when the same broad idea — movement through geographic space — is encoded with a different grammar?
-
-The laboratory keeps four representations separate so their assumptions remain inspectable rather than being collapsed into one attractive flow map.
-
-## Four movement grammars
-
-| Representation | What it encodes | What it does not prove |
+| Representation | Spatial meaning | Analytical use |
 | --- | --- | --- |
-| Vector field | Direction and magnitude sampled over space | A set of observed routes |
-| Origin–destination network | Quantity exchanged between named origins and destinations | The path actually travelled |
-| Timestamped trajectories | Ordered positions through time | A continuous field between tracks |
-| Lagrangian release | Numerically advected particles in a frozen field snapshot | A forecast of future transport |
+| Vector field | Direction and magnitude defined over continuous space | Regional flow structure and local directional context |
+| Origin–destination network | Weighted relation between discrete places | Interaction intensity and connectivity |
+| Trajectory | Time-ordered positions of individual moving entities | Path geometry, timing, and movement sequence |
+| Lagrangian release | Numerically advected particles in a velocity field | Flow-following transport and dispersion structure |
 
-The field view can use current upstream wind when available. Deterministic fallback data are explicitly identified as fallback. The OD and trajectory examples are reproducible teaching data, not observed transport records.
+The laboratory makes these representations directly comparable because many geographic-flow questions depend on choosing the correct spatial support. A field describes a property of space; an OD matrix describes relations between places; a trajectory records movement through time; and a release derives paths from a field.
 
-## Why the distinctions matter
+## Spatial computation
 
-Two maps can look similar while carrying different evidence. An arc between cities may show an OD relation, not a route. A particle path may be a numerical consequence of a field, not an observed object. A dense set of trajectories may reveal repeated motion without defining a continuous velocity field.
+The field view can use current wind observations when the upstream service is available. OD and trajectory modes use reproducible teaching datasets with geographic coordinates and timestamps. Release mode performs numerical advection through a frozen field realization, linking Eulerian and Lagrangian perspectives on the same spatial process.
 
-The laboratory is designed to make those category errors harder to make.
+This combination supports discussion of network geography, movement ecology, transport geography, spatial interaction, trajectory analysis, and geovisual analytics.
 
-## Operational use
+## Instrument access
 
-Use the four modes side by side to examine:
+**Live instrument:** https://geogeeklab.github.io/geographic-flow-lab/
 
-- how spatial continuity differs from discrete connection;
-- how time enters a trajectory but may be absent from an OD matrix;
-- how a model-derived path differs from an observed track;
-- how visual similarity can hide different source semantics.
+The repository is a public entrypoint to the production module maintained in `GeoGeekLab/GeoGeekLab.github.io`. `SOURCE.json` records the pinned source revision; `PRODUCTION.md` specifies representation semantics, data conditions, and deployment behavior.
 
-**Public instrument**  
-https://geogeeklab.github.io/geographic-flow-lab/
-
-The entry repository loads the production module from `GeoGeekLab/GeoGeekLab.github.io`, pinned to commit `d949bd75870bfd49f6d12b297e6cca02de107f9c`.
-
-See [`PRODUCTION.md`](./PRODUCTION.md) for source semantics, fallback behavior, and interpretation limits.
-
-For local inspection:
-
-```bash
-python -m http.server 8000
-```
-
----
-
-**GeoGeek Observatory** — maps are arguments about data, not just pictures of it.
+*GeoGeek note — representation determines the question you can ask.*
