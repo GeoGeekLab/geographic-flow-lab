@@ -1,24 +1,22 @@
 # Production contract
 
-## Runtime baseline
+`geographic-flow-lab` is the public entrypoint for the production *GEOGRAPHIC FLOW LABORATORY*.
 
-This repository mounts the Geographic Flow Laboratory production module from `GeoGeekLab/GeoGeekLab.github.io` pinned to commit `d949bd75870bfd49f6d12b297e6cca02de107f9c`.
+## Runtime
 
-The runtime exposes four distinct movement representations: vector field, origin-destination network, timestamped trajectories, and Lagrangian release.
+- Source repository: `GeoGeekLab/GeoGeekLab.github.io`
+- Tested source revision: `064ce2c718499fc26a744a9e58cad09d97a323fb`
+- Production channel: `https://geogeeklab.github.io/`
+- Shared bootstrap: `/core/observatory-entry.js`
+- Flow runtime: `/flow-lab.js` + `/flow-lab-polish.js`
+- Provider control: `/core/provider-stability.js` + `/core/data-supply.js`
 
-## Data contract
+The entrypoint and main Lab use the same field, OD, trajectory, release, and display runtime.
 
-- Field: current wind when an upstream field is available; deterministic fallback remains explicitly labeled as fallback.
-- OD: reproducible normalized teaching matrix with real city coordinates.
-- Trips: reproducible timestamped teaching trajectories.
-- Release: numerical advection through one frozen field snapshot.
+## Data and reference supply
 
-## Interpretation limits
+Current wind sampling uses the production Flow provider path. Natural Earth reference geometry is normalized by the shared provider-stability layer to a fixed source revision. Teaching OD and trajectory datasets remain defined by the main production runtime.
 
-Representation is not phenomenon. OD arcs are not literal travelled routes. Teaching trajectories are not observed vehicles. Release particles are derived paths, not forecasts.
+## Release checks
 
-## Deployment contract
-
-`main` deploys through GitHub Pages Actions. Static contract checks run before the Pages artifact is uploaded.
-
-The production runtime is pinned to an immutable source commit. Runtime upgrades require an explicit pinned-SHA change in `index.html`.
+The repository validates the source revision, shared bootstrap reference, Chromium instrument mount, absence of `.instrument-error`, provider/Data Supply installation, absence of floating Natural Earth requests, instrument screenshot, Pages deployment, and the deployed public endpoint.
