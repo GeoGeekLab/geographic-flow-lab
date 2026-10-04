@@ -2,9 +2,17 @@
 
 **Field / OD / trajectory / release.**
 
-A standalone GeoGeek Observatory instrument for comparing four movement grammars without treating them as the same geometry.
+Geographic Flow Laboratory is an independent GeoGeek Observatory deployment of the production movement-representation instrument. It keeps vector fields, origin-destination networks, timestamped trajectories, and Lagrangian releases separate so their meanings are not collapsed into one geometry.
 
-## Run locally
+## Public instrument
+
+https://geogeeklab.github.io/geographic-flow-lab/
+
+## Runtime
+
+The production runtime is pinned to a specific commit of `GeoGeekLab/GeoGeekLab.github.io`. See `PRODUCTION.md` for the exact baseline, source semantics, interpretation limits, and deployment policy.
+
+## Local shell
 
 ```bash
 python -m http.server 8000
@@ -12,14 +20,10 @@ python -m http.server 8000
 
 Open `http://localhost:8000`.
 
+The instrument requires network access for its pinned runtime and declared upstream field/reference sources.
+
 ## Deployment
 
-GitHub Pages deploys automatically from `main` through `.github/workflows/pages.yml`.
+Pushes to `main` deploy through `.github/workflows/pages.yml`. Static production-contract checks run before the Pages artifact is uploaded.
 
-Public URL: https://geogeeklab.github.io/geographic-flow-lab/
-
-## Provenance
-
-Extracted into an independent repository from the GeoGeek Lab Observatory in `GeoGeekLab/GeoGeekLab.github.io`.
-
-Live wind and geographic reference sources are attributed in the interface.
+Third-party software and data remain subject to their respective terms and licenses. This repository does not introduce a project license that is absent from the source project.
