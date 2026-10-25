@@ -2,7 +2,7 @@
 
 <!-- GeoGeekLab VIS: BEGIN -->
 <p align="center">
-  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/scientific-instruments/official-candidates-v1/geographic-flow-lab"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/official-candidates-v1/geographic-flow-lab/readme-hero.svg" alt="Geographic Flow Laboratory — conceptual spatial-flow visual identity" width="720"></a>
+  <img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/readme-artwork/v3/geographic-flow-lab/readme-artwork.webp" alt="Geographic Flow Laboratory spatial field and motion symbol" width="390">
 </p>
 <!-- GeoGeekLab VIS: END -->
 
