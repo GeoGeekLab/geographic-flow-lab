@@ -1,5 +1,11 @@
 # Geographic Flow Laboratory
 
+<!-- GeoGeekLab VIS: BEGIN -->
+<p align="center">
+  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/scientific-instruments/official-candidates-v1/geographic-flow-lab"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/official-candidates-v1/geographic-flow-lab/readme-hero.svg" alt="Geographic Flow Laboratory — conceptual spatial-flow visual identity" width="720"></a>
+</p>
+<!-- GeoGeekLab VIS: END -->
+
 **Vector field · origin–destination graph · trajectory · Lagrangian advection**
 
 *GEOGRAPHIC FLOW LABORATORY* is a GIS and geovisual-analytics instrument for comparing four representations of movement through geographic space: Eulerian vector fields, origin–destination relations, timestamped trajectories, and Lagrangian particle releases.
